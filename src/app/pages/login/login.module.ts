@@ -6,6 +6,7 @@ import { HttpModule} from "@angular/http";
 import { Login } from './login.component';
 import { routing }       from './login.routing';
 import  {LoginService} from  './login.service';
+import {ModalModule} from "ng2-bootstrap";
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import  {LoginService} from  './login.service';
     FormsModule,
     NgaModule,
     HttpModule,
+    ModalModule.forRoot(),
     routing
   ],
   declarations: [
