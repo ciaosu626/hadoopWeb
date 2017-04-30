@@ -1,9 +1,11 @@
-import {Component} from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
 import {FormGroup, AbstractControl, FormBuilder, Validators} from '@angular/forms';
 import {LoginService} from './login.service';
 import {LoginCount} from  './model/user.interface';
 import {CookieService} from 'ng2-cookies';
+import { ModalDirective } from 'ng2-bootstrap';
 import 'style-loader!./login.scss';
+
 
 
 @Component({
@@ -12,6 +14,7 @@ import 'style-loader!./login.scss';
   providers : [CookieService]
 })
 export class Login {
+  @ViewChild('childModal') childModal: ModalDirective;
 
   public form: FormGroup;
   public email: AbstractControl;

@@ -25,8 +25,29 @@
         </div>
       </div>
     </form>
-
+    <button class="btn btn-success" (click)="lgModal.show()">Large modal</button>
     <div class="auth-sep"><span><span>or Sign in with one click</span></span></div>
 
   </div>
 </div>
+
+<!-- Large modal -->
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="close" (click)="lgModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Large modal</h4>
+      </div>
+      <div class="modal-body">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary confirm-btn" (click)="lgModal.hide()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
